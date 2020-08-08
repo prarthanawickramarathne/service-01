@@ -1,12 +1,12 @@
 const express = require("express");
 const axios = require("axios");
 const redis = require("redis");
-
+const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
 
 const app = express();
-
+app.use(cors());
 // setup redis client
 
 const client = redis.createClient({
