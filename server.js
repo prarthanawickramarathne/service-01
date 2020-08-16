@@ -60,7 +60,7 @@ app.post("/file/upload", uploadStrategy, (req, res) => {
 
   try {
     axios
-        .post("https://rus95-functionapp.azurewebsites.net/api/HttpTrigger1", {
+        .post("https://pra-functionapp.azurewebsites.net/api/HttpTrigger", {
           filedata: req.file.buffer,
           filename: req.file.originalname
         })
